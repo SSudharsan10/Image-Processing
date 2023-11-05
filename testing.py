@@ -13,7 +13,7 @@ def detect(frame):
         
         y_predict = np.argmax(model.predict(img), axis=-1)
         print(prediction)
-frame=cv2.imread(r"C:\Users\VISHAL\Downloads\DATASETNEW\Dataset\image\background6.jpg")
+frame=cv2.imread(r"C:\Users\Downloads\DATASETNEW\Dataset\image\background6.jpg")
 data=detect(frame)
-frame=cv2.imread(r"C:\Users\VISHAL\Downloads\DATASETNEW\Dataset\test_set\B\2.png")
+frame=cv2.imread(r"C:\Users\Downloads\DATASETNEW\Dataset\test_set\B\2.png")
 data1=detect(frame)
