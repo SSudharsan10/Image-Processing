@@ -7,9 +7,9 @@ from keras.layers import Flatten
 from keras.preprocessing.image import ImageDataGenerator
 train_datagen = ImageDataGenerator(rescale = 1./255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True)
 test_datagen = ImageDataGenerator(rescale = 1./255)
-x_train = train_datagen.flow_from_directory(r"C:\Users\VISHAL\Downloads\DATASETNEW\Dataset\training_set", target_size= (64,64) , batch_size=300, class_mode='categorical',color_mode='grayscale')
+x_train = train_datagen.flow_from_directory(r"C:\Users\Downloads\DATASETNEW\Dataset\training_set", target_size= (64,64) , batch_size=300, class_mode='categorical',color_mode='grayscale')
 x_train.class_indices
-x_test = test_datagen.flow_from_directory(r"C:\Users\VISHAL\Downloads\DATASETNEW\Dataset\test_set", target_size=(64,64), batch_size=300, class_mode='categorical',color_mode='grayscale')
+x_test = test_datagen.flow_from_directory(r"C:\Users\Downloads\DATASETNEW\Dataset\test_set", target_size=(64,64), batch_size=300, class_mode='categorical',color_mode='grayscale')
 x_test.class_indices 
 model = Sequential()
 model.add(Convolution2D(32, (3,3), input_shape=(64,64,1), activation = 'relu'))
